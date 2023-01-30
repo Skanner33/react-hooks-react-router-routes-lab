@@ -7,29 +7,25 @@ import Directors from "./Directors";
 import Movies from "./Movies";
 
 function App() {
-  return
-  <div>
-  
-    <NavBar />
-
-    <Switch>
-      <Route path="/movies">
+  return (
+    <div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/movies" >
         <Movies />
-      </Route>
-
-      <Route path="/directors">
+        </Route>
+        <Route exact path="/directors">
         <Directors />
-      </Route>
-
-      <Route path="/actors">
+        </Route>
+        <Route exact path="/actors">
         <Actors />
-      </Route>
-
-      <Route path="/">
+        </Route>
+        <Route exact path="/">
         <Home />
-      </Route>
-    </Switch>
-  </div>;
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
